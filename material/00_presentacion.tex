@@ -1,0 +1,275 @@
+% Created 2026-02-02 Mon 22:23
+% Intended LaTeX compiler: pdflatex
+\documentclass[presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\setbeamercolor{background canvas}{bg=}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{yfonts}
+\usepackage{tikz}
+\usepackage[normalem]{ulem}
+\definecolor{UnamBlue}{RGB}{3,40,109}
+\definecolor{gris1}{RGB}{40,40,40}
+\definecolor{gris2}{RGB}{80,80,80}
+\definecolor{gris3}{RGB}{120,120,120}
+\setbeamercolor{alerted text}{fg=red}
+\setbeamertemplate{footline}[slide number]
+\definecolor{string}{rgb}{0,0.6,0} \definecolor{shadow}{rgb}{0.5,0.5,0.5} \definecolor{keyword}{rgb}{0.58,0,0.82} \definecolor{identifier}{rgb}{0,0,0.7}
+\setbeamerfont{author}{size=\footnotesize}
+\newcommand{\attrib}[3]{ \begin{textblock*}{150mm}[1,1](125mm,93mm)  {\tiny \hfill \textcolor{gray}{\href{#3}{#1 \textcolor{lightgray}{(#2)}}}} \end{textblock*} }
+\newcommand{\img}[4]{ \includegraphics[width=\textwidth]{#1} \attrib{#2}{#3}{#4} }
+\newcommand*\circulo[1]{\tikz[baseline=(char.base)]{ \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+\graphicspath{ {./img/} }
+\newcommand{\Smiley}{\tikz[baseline=-0.75ex]{ \draw circle (2mm); \node[fill,circle,inner sep=0.5pt] (left eye) at (135:0.8mm) {}; \node[fill,circle,inner sep=0.5pt] (right eye) at (45:0.8mm) {}; \draw (-145:0.9mm) arc (-120:-60:1.5mm); } }
+\newcommand{\frownie}{\tikz[baseline=-0.75ex]{\draw circle (2mm); \node[fill,circle,inner sep=0.5pt] (left eye) at (135:0.8mm) {}; \node[fill,circle,inner sep=0.5pt] (right eye) at (45:0.8mm) {}; \draw (-145:0.9mm) arc (120:60:1.5mm); } }
+\newcommand{\neutranie}{\tikz[baseline=-0.75ex]{\draw circle (2mm); \node[fill,circle,inner sep=0.5pt] (left eye) at (135:0.8mm) {}; \node[fill,circle,inner sep=0.5pt] (right eye) at (45:0.8mm) {}; \draw (-135:0.9mm) -- (-45:0.9mm); } }
+\AtBeginSection[]{ \begin{frame}<beamer> \frametitle{Índice} \tableofcontents[currentsection] \end{frame} }
+\usetheme{metropolis}
+\usecolortheme{lily}
+\author{Gunnar Wolf}
+\date{}
+\title{Presentación del curso}
+\subtitle{Fundamentos y Técnicas de Seguridad para Aplicaciones}
+\hypersetup{
+ pdfauthor={Gunnar Wolf},
+ pdftitle={Presentación del curso},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 30.1 (Org mode 9.7.11)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\section{Punto de partida}
+\label{sec:org4bd1e34}
+
+\begin{frame}[label={sec:org42019b9}]{¡Hola! Soy Gunnar, y soy programador}
+\centering
+\begin{center}
+\includegraphics[width=0.9\textwidth]{./gwolf_librero.jpg}
+\end{center}
+\pause \scriptsize
+
+(Aquí es cuando todos dicen \emph{``¡Hola Gunnar!''})
+\end{frame}
+\begin{frame}[label={sec:org2404478}]{Mis coordenadas}
+\centering Datos personales:
+
+\begin{description}
+\item[{Nombre}] Gunnar Eyal Wolf Iszaevich
+\item[{Email}] gwolf@gwolf.org
+\item[{Ubicación}] Instituto de Investigaciones Económicas UNAM (Secretaría
+Técnica)
+\item[{Teléfono}] 55-5623-0154
+\end{description}
+
+\vskip 1.5em De este curso:
+
+\begin{description}
+\item[{Repositorio Git}] { \small\url{https://github.com/gwolf/seg_aplic_2026-2} }
+
+\pause \vskip 2em \scriptsize \raggedleft
+Importante: \textbf{¿Cómo se llevan con Git?}
+\end{description}
+\end{frame}
+\begin{frame}[label={sec:orge8f0929}]{Horario / calendario}
+\begin{itemize}
+\item Martes y jueves, 8:30–10:00 (3hr semanales)
+\item Del 3 de febrero al 29 de mayo de 2026 (16 semanas)
+\item \alert{48} horas previstas efectivas de cursado
+\end{itemize}
+\end{frame}
+\section{El cursado: Revisión temática}
+\label{sec:orgaf82ab8}
+
+\begin{frame}[label={sec:orgedaafc5}]{Generalidades}
+\begin{description}
+\item[{Campo de conocimiento}] Redes y seguridad en cómputo
+\item[{Semestre}] 2°–3°
+\item[{Objetivo general}] Que el alumno identifique las principales amenazas a
+la seguridad informática, y conozca las principales técnicas para
+reconocerlas y evitarlas
+\item[{Unidades}] \begin{enumerate}
+\item Introducción a la seguridad de la información
+\item El panorama de la seguridad informática hoy
+\item Tipos de ataque
+\item Prácticas de programación segura
+\end{enumerate}
+\end{description}
+\end{frame}
+\begin{frame}[label={sec:orgd68bd6e},fragile]{Ojo: Plan de estudios \emph{flexible y adaptable}}
+ \begin{itemize}
+\item Por el \emph{nivel} en el que estamos, y por el \emph{tamaño del grupo} que
+tenemos, los temas a desarrollar \alert{dependen de sus intereses y
+habilidades}
+\item Presento una \emph{propuesta} de plan de estudios
+\item Pero los temas \emph{deben seguir} \alert{sus temas prioritarios}
+\begin{itemize}
+\item \(\Rightarrow\) Su experiencia personal/profesional
+\item \(\Rightarrow\) Sus proyectos de tesis
+\end{itemize}
+\end{itemize}
+\vskip 2em \pause \begin{center}
+\alert{¡Primera (micro)tarea!}
+
+En el repositorio Git, bajo \texttt{/entregas/intereses/<ApellidoNombre>/},
+escriban sus intereses y expectativas para la materia.
+\end{center}
+\end{frame}
+\begin{frame}[label={sec:orgcc81d3b}]{1. Introducción a la seguridad de la información}
+\begin{columns} \begin{column}{0.3\textwidth}
+\begin{center}
+\includegraphics[width=\textwidth]{./candados.jpg}
+\end{center}
+\end{column} \begin{column}{0.7\textwidth}
+\begin{enumerate}
+\item ¿Qué es seguridad de la información?
+\item Características de un sistema seguro
+\item Propiedades de la seguridad de la información
+\item Seguridad informática capa a capa
+\item Evolución de los retos de seguridad informática sobre el desarrollo histórico de la computación
+\end{enumerate}
+\end{column} \end{columns}
+
+\vskip 1em \raggedleft \scriptsize Imagen: propia
+\end{frame}
+\begin{frame}[label={sec:org0f6c3b8}]{2. El panorama de la seguridad informática hoy}
+\begin{columns} \begin{column}{0.7\textwidth}
+\begin{enumerate}
+\item Modelos de riesgo / Modelos de ataque
+\item Manejo y respuesta a vulnerabilidades
+\item Gestión de permisos y privilegios
+\begin{itemize}
+\item Principio del menor privilegio
+\end{itemize}
+\item Bases de datos de vulnerabilidades y debilidades
+\begin{itemize}
+\item CVE — Common Vulnerabilities and Exposure
+\item CWE — Common Weakness Enumeration
+\end{itemize}
+\end{enumerate}
+\end{column} \begin{column}{0.3\textwidth}
+\begin{center}
+\includegraphics[width=\textwidth]{./tagcloud.png}
+\end{center}
+\end{column} \end{columns}
+
+\vskip 1em \raggedleft \scriptsize Imagen: TechNewsRadio: Updated CISSP Domains \\ \url{https://www.technewsradio.com/2015/03/updated-cissp-domains.html}
+\end{frame}
+\begin{frame}[label={sec:org5094d7d}]{3. Tipos de ataque}
+\begin{columns} \begin{column}{0.4\textwidth}
+\begin{center}
+\includegraphics[width=\textwidth]{./attacker.jpg}
+\end{center}
+\end{column} \begin{column}{0.6\textwidth}
+\begin{enumerate}
+\item Denegación de servicio (DoS, DDoS, amplificación, reflexión)
+\item Desbordamientos (de buffer, de stack, de enteros)
+\item Inyecciones (de cadenas, SQL, objetos, código, solicitudes)
+\item Cruce de límites de confianza (XSS, CSRF)
+\item Basados en codificación
+\item Algoritmos débiles de cifrado
+\end{enumerate}
+\end{column} \end{columns}
+
+\vskip 1em \raggedleft \scriptsize Imagen: Increasing Your Digital Responsibility - Protect Yourself   \url{https://wecdsbit.blogspot.com/2017/05/increasing-your-digital-responsibility.html}
+\end{frame}
+\begin{frame}[label={sec:org85bb42a}]{4. Prácticas de programación segura}
+\begin{columns} \begin{column}{0.7\textwidth}
+\begin{enumerate}
+\item Principios de diseño seguro
+\item Prácticas seguras de programación
+\begin{itemize}
+\item Estándares y convenciones
+\item Manejo seguro de datos
+\item Manejo de errores
+\item Manejo de información sensible (contraseñas / datos personales)
+\end{itemize}
+\item Evolución de los lenguajes de programación en lo relativo a la seguridad
+\item Consideraciones de versionado y mantenibilidad
+\end{enumerate}
+\end{column} \begin{column}{0.3\textwidth}
+\begin{center}
+\includegraphics[width=\textwidth]{./consejos_seguridad.jpg}
+\end{center}
+\vskip 6em \, \end{column} \end{columns}
+
+\vskip 1em \raggedleft \scriptsize Imagen: Seguridad en internet – 4 consejos de seguridad básicos para tu sitio Web \url{https://www.socialfuturo.com/internet/seguridad-en-internet-4-consejos-de-seguridad-basicas-para-tu-sitio-web/}
+\end{frame}
+\section{¿Cómo evaluaremos?}
+\label{sec:org3d2ae7d}
+\begin{frame}[label={sec:org2e30117}]{¿En qué consistirá la evaluación?}
+\begin{itemize}
+\item No voy a mentirles: \emph{¡No lo sé!} \neutranie
+\item Es la \sout{primera} segunda vez que propongo un curso a nivel posgrado\ldots{} ¡No
+crean que no impone un poco! \Smiley
+\begin{itemize}
+\item La evaluación tiene que ser mucho más \emph{cercana} que en un curso de
+licenciatura
+\end{itemize}
+\item \ldots{} ¡Pero me comprometo a ser justo y a no perjudicarlos!
+\item Ya estando en nivel posgrado, creo que podremos ir acordando eso en
+conjunto
+\end{itemize}
+\begin{center}
+\includegraphics[height=0.4\textheight]{./cuaderno_eval.jpg}
+\end{center}
+\vskip 1em \raggedleft \scriptsize Rúbrica para evaluar mapas mentales – Nivel intermedio \url{https://gesvinromero.com/2016/02/18/rubrica-para-evaluar-mapas-mentales-nivel-intermedio-ebook/}
+\end{frame}
+\begin{frame}[label={sec:orgd0ace42}]{Ideas para la evaluación}
+\begin{itemize}
+\item Exposición para debate de los temas que vayamos tocando
+\item Tareas: Implementaciones (código) de algunos conceptos que abordemos
+\begin{itemize}
+\item \emph{Prácticas} de conceptos más simples que sea necesario reforzar
+\end{itemize}
+\item Algún tema más extenso a exponer, a propuesta de cada uno de ustedes
+\end{itemize}
+\end{frame}
+\begin{frame}[label={sec:orgbfbbc82}]{El elefante en el cuarto: ¿LLMs / GenAI / GPT / como-le-digas?}
+\begin{columns} \begin{column}{0.3\textwidth}
+\begin{center}
+\includegraphics[width=\textwidth]{./elefante.jpg}
+\end{center}
+\end{column} \begin{column}{0.7\textwidth}
+\begin{itemize}
+\item No podemos cerrarnos a su existencia (¡y conveniencia!)
+\item Pero tampoco podemos permitir que \emph{anulen} al esfuerzo en las consignas
+\item Aprovechemos y exploremos — pero con \alert{honestidad académica}, usándolos
+para \alert{mejorar} (no reemplazar) nuestro esfuerzo
+\end{itemize}
+\end{column} \end{columns}
+
+\begin{columns} \begin{column}{0.7\textwidth}
+\begin{itemize}
+\item Todos somos nuevos usándolos, y tenemos que aprender
+\item Algunos somos más bien \emph{escépticos}. ¡Pero no hay que cerrarnos! \Smiley
+\end{itemize}
+\end{column} \begin{column}{0.3\textwidth}
+\begin{center}
+\includegraphics[width=\textwidth]{./elefante2.jpg}
+\end{center}
+\end{column} \end{columns}
+\raggedleft \scriptsize Imágenes:  On 2012, Blogging and Elephants in the Room», \url{https://www.chroniclesofcardigan.com/}
+\end{frame}
+\begin{frame}[label={sec:orgf510e48}]{¿Algo más?}
+¡Espero que estén tan emocionados como yo de iniciar este cursado!
+
+\begin{description}
+\item[{Nombre}] Gunnar Eyal Wolf Iszaevich
+\item[{Email}] gwolf@gwolf.org
+\item[{Ubicación}] Instituto de Investigaciones Económicas UNAM (Secretaría
+Técnica)
+\item[{Teléfono}] 55-5623-0154
+\end{description}
+\end{frame}
+\end{document}
