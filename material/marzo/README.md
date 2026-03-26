@@ -187,5 +187,25 @@
     - Inyecciones de SQL (y algunas mitigaciones)
       - Escapar las cadenas
 	  - Cadenas preparadas
+
+7. `2026.03.24`
+
+    - Inyecciones de SQL (y algunas mitigaciones)
+	  - Cadenas preparadas
 	  - Mapeadores objeto-relacionales (ORMs)
-	- Inyecciones de objetos → serialización
+    - Otras inyecciones
+	  - Inyección de JavaScript, CSS en elementos HTML (_primera
+        probadita_)
+
+8. `2026.03.26`
+
+    - Ingeniería social como _inyección_ de tipo de contenido
+	  - ¿Cómo se determina el _tipo_ de un archivo?
+	  - Ejemplos en que se oculta el verdadero tipo de un archivo al
+        usuario (en nombre de la usabilidad)
+    - Otras inyecciones
+	  - Inyecciones de objetos → serialización — `pickle`,
+        `Data::Dumper`. 
+      - Alternativas (imperfectas): `JSON`, `YAML`
+    - Planteamiento del ejercicio práctico: [¡Intentemos un
+      ataque!](../../entregas/intentemos_ataque/README.md)
