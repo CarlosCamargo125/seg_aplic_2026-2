@@ -1,5 +1,6 @@
 ## Actividad práctica: ¡Intentemos un ataque! (a uno mismo)
 
+**Entrega:** 2026.03.09 (jueves)
 
 En el transcurso del último mes, hemos pasado de hablar de _los atributos
 generales_ de la seguridad en cómputo y de _modelos de riesgos/ataques_ que
@@ -89,7 +90,6 @@ Pueden usar herramientas variadas:
 
 **Ojo:** si usan algo que no escribieron ustedes, asegúrense de *entender
 qué hace*. Documenten la fuente de donde lo obtuvieron.
-.
 
 **Manténganse únicamente como _sus propios_ adversarios**: Si la
 vulnerabilidad implica afectar otros sistemas (por ejemplo, un ataque de
